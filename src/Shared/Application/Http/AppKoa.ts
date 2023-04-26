@@ -2,6 +2,9 @@ import cors from '@koa/cors';
 import koaQs from 'koa-qs';
 import helmet from 'koa-helmet';
 import { Server } from 'http';
+import { CategoryController } from '../../../Auth/Presentation/Controllers/CategoryController';
+import { ProductController } from '../../../Auth/Presentation/Controllers/ProductController';
+
 
 import AuthenticationKoaMiddleware from '../../../Auth/Presentation/Middlewares/AuthenticationKoaMiddleware';
 import RedirectRouteNotFoundKoaMiddleware from '../../Presentation/Middlewares/RedirectRouteNotFoundKoaMiddleware';

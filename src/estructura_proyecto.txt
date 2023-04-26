@@ -1,0 +1,723 @@
+Auth/Domain/Entities/
+|   IRoleDomain.ts
+|   ITokenDomain.ts
+|   IUserDomain.ts
+|   Role.ts
+|   Token.ts
+|   User.ts
+Auth/Domain/Exceptions/
+|   BadCredentialsException.ts
+|   CantDisabledException.ts
+|   PasswordWrongException.ts
+|   RoleDisabledException.ts
+|   RoleOfSystemNotDeletedException.ts
+|   UnverifiedUserException.ts
+|   UserDisabledException.ts
+|   WrongPermissionsException.ts
+Auth/Domain/Models/
+|   IDecodeToken.ts
+|   IToken.ts
+|   JWTToken.ts
+Auth/Domain/Payloads/Auth/
+|   AuthPayload.ts
+|   ChangeForgotPasswordPayload.ts
+|   ConfirmationTokenPayload.ts
+|   ForgotPasswordPayload.ts
+|   RefreshTokenPayload.ts
+|   RegisterPayload.ts
+|   UpdateMePayload.ts
+|   VerifyYourAccountPayload.ts
+Auth/Domain/Payloads/Role/
+|   RoleRepPayload.ts
+|   RoleUpdatePayload.ts
+Auth/Domain/Payloads/User/
+|   ChangeMyPasswordPayload.ts
+|   ChangeUserPasswordPayload.ts
+|   CheckUserRolePayload.ts
+|   UserActivePayload.ts
+|   UserAssignRoleBySlugPayload.ts
+|   UserAssignRolePayload.ts
+|   UserPasswordPayload.ts
+|   UserRepPayload.ts
+|   UserSavePayload.ts
+|   UserUpdatePayload.ts
+Auth/Domain/Payloads/
+|---Auth
+|---Role
+|---User
+Auth/Domain/Services/
+|   AuthService.ts
+|   UserService.ts
+Auth/Domain/Types/
+|   Auth.ts
+|   TypeAuth.ts
+Auth/Domain/UseCases/Auth/
+|   ChangeForgotPasswordUseCase.ts
+|   ForgotPasswordUseCase.ts
+|   GetTokenUseCase.ts
+|   LoginUseCase.ts
+|   LogoutUseCase.ts
+|   PermissionUseCase.ts
+|   RefreshTokenUseCase.ts
+|   RegisterUseCase.ts
+|   SetTokenBlacklistUseCase.ts
+|   SyncRolesPermissionUseCase.ts
+|   UpdateMeUseCase.ts
+|   VerifyTokenBlacklistUseCase.ts
+|   VerifyYourAccountUseCase.ts
+Auth/Domain/UseCases/Role/
+|   GetRoleUseCase.ts
+|   ListRolesUseCase.ts
+|   RemoveRoleUseCase.ts
+|   SaveRoleUseCase.ts
+|   UpdateRoleUseCase.ts
+Auth/Domain/UseCases/User/
+|   ActiveUserUseCase.ts
+|   AssignRoleBySlugUseCase.ts
+|   AssignRoleUseCase.ts
+|   ChangeMyPasswordUseCase.ts
+|   ChangeUserPasswordUseCase.ts
+|   GetUserUseCase.ts
+|   ListUsersUseCase.ts
+|   RemoveUserUseCase.ts
+|   SaveUserUseCase.ts
+|   UpdateUserUseCase.ts
+Auth/Domain/UseCases/
+|---Auth
+|---Role
+|---User
+Auth/Domain/
+|---Entities
+|---Exceptions
+|---Models
+|---Payloads
+|---Services
+|---Types
+|---UseCases
+Auth/Infrastructure/Repositories/
+|   CategoryRepository.ts
+|   IRoleRepository.ts
+|   ITokenRepository.ts
+|   IUserRepository.ts
+|   RoleMikroORMRepository.ts
+|   RoleMongooseRepository.ts
+|   RoleTypeORMRepository.ts
+|   TokenMikroORMRepository.ts
+|   TokenMongooseRepository.ts
+|   TokenRedisRepository.ts
+|   TokenTypeORMRepository.ts
+|   UserMikroORMRepository.ts
+|   UserMongooseRepository.ts
+|   UserTypeORMRepository.ts
+Auth/Infrastructure/Schemas/
+|   RoleMikroORM.ts
+|   RoleMongoose.ts
+|   RoleTypeORM.ts
+|   TokenMikroORM.ts
+|   TokenMongoose.ts
+|   TokenTypeORM.ts
+|   UserMikroORM.ts
+|   UserMongoose.ts
+|   UserTypeORM.ts
+Auth/Infrastructure/Seeds/
+|   UserSeed.ts
+Auth/Infrastructure/
+|---Repositories
+|---Schemas
+|---Seeds
+Auth/Presentation/Commands/
+|   ActiveUserCommand.ts
+|   AddRoleCommand.ts
+|   AddUserCommand.ts
+|   AddUserRoleCommand.ts
+|   AssingRoleToUserCommand.ts
+|   SyncRolesPermissionCommand.ts
+Auth/Presentation/Controllers/
+|   AuthController.ts
+|   CategoryController.ts
+|   ProductController.ts
+|   RoleController.ts
+|   UserControllers.ts
+Auth/Presentation/Criterias/
+|   RoleFilter.ts
+|   RoleSort.ts
+|   UserFilter.ts
+|   UserSort.ts
+Auth/Presentation/Exceptions/
+|   ForbiddenHttpException.ts
+|   TokenBlackListedHttpException.ts
+|   TokenExpiredHttpException.ts
+|   TokenNotFoundHttpException.ts
+Auth/Presentation/Handlers/
+|   AuthExpressHandler.ts
+|   AuthKoaHandler.ts
+|   RoleExpressHandler.ts
+|   RoleKoaHandler.ts
+|   UserExpressHandler.ts
+|   UserKoaHandler.ts
+Auth/Presentation/Helpers/
+|   AuthUser.ts
+|   Validations.ts
+Auth/Presentation/Middlewares/
+|   AuthenticationExpressMiddleware.ts
+|   AuthenticationKoaMiddleware.ts
+|   AuthorizeExpressMiddleware.ts
+|   AuthorizeKoaMiddleware.ts
+|   RefreshTokenExpressMiddleware.ts
+|   RefreshTokenKoaMiddleware.ts
+|   VerifyTokenExpressMiddleware.ts
+|   VerifyTokenKoaMiddleware.ts
+Auth/Presentation/Requests/Role/
+|   RoleCommandSaveRequest.ts
+Auth/Presentation/Requests/User/
+|   UserAssignRoleByCommandRequest.ts
+|   UserCommandSaveRequest.ts
+Auth/Presentation/Requests/
+|---Role
+|---User
+Auth/Presentation/Transformers/
+|   AuthTransformer.ts
+|   IRoleTransformer.ts
+|   IUserMinimalDataTransformer.ts
+|   IUserTransformer.ts
+|   PermissionsTransformer.ts
+|   RoleTransformer.ts
+|   RoleUserTransformer.ts
+|   UserMinimalDataTransformer.ts
+|   UserTransformer.ts
+Auth/Presentation/Validations/Auth/
+|   AuthSchemaValidation.ts
+|   ChangeForgotPasswordSchemaValidation.ts
+|   ForgotPasswordSchemaValidation.ts
+|   RefreshTokenSchemaValidation.ts
+|   RegisterSchemaValidation.ts
+|   UpdateMeSchemaValidation.ts
+|   VerifyYourAccountSchemaValidation.ts
+Auth/Presentation/Validations/Role/
+|   RoleSchemaSaveValidation.ts
+|   RoleSchemaUpdateValidation.ts
+Auth/Presentation/Validations/User/
+|   ChangeMyPasswordSchemaValidation.ts
+|   ChangeUserPasswordSchemaValidation.ts
+|   PasswordSchemaValidation.ts
+|   UserAssignSchemaValidation.ts
+|   UserPasswordSchemaValidation.ts
+|   UserRepSchemaValidation.ts
+|   UserSaveSchemaValidation.ts
+|   UserShapeValidation.ts
+|   UserUpdateSchemaValidation.ts
+|   UserWithoutPermissionsSchemaValidation.ts
+Auth/Presentation/Validations/
+|---Auth
+|---Role
+|---User
+Auth/Presentation/
+|---Commands
+|---Controllers
+|---Criterias
+|---Exceptions
+|---Handlers
+|---Helpers
+|---Middlewares
+|---Requests
+|---Transformers
+|---Validations
+Auth/Tests/
+|   forgotPassword.handler.spec.ts
+|   keepAlive.handler.spec.ts
+|   login.handler.spec.ts
+|   permission.handler.spec.ts
+|   role.handler.spec.ts
+|   signup.handler.spec.ts
+|   types.ts
+|   user.handler.spec.ts
+Auth/
+|---Domain
+|---Infrastructure
+|---Presentation
+|---Tests
+Config/Injects/
+|   index.ts
+Config/Locales/
+|   en.json
+|   es.json
+Config/
+|   IGroupPermission.ts
+|   MainConfig.ts
+|   Permissions.ts
+|   Roles.ts
+|   validateEnv.ts
+|---Injects
+|---Locales
+File/Domain/Entities/
+|   Category.ts
+|   File.ts
+|   FileVersion.ts
+|   IFileBuild.ts
+|   IFileDomain.ts
+|   IFileDomainDto.ts
+|   IFileVersionDomain.ts
+|   IFileVersionPayload.ts
+|   Product.ts
+File/Domain/Models/
+|   FileDTO.ts
+|   FileVersionDTO.ts
+|   IFileDTO.ts
+|   IFileVersionDTO.ts
+File/Domain/Payloads/
+|   CreateBucketPayload.ts
+|   DownloadPayload.ts
+|   FileBase64RepPayload.ts
+|   FileMultipartRepPayload.ts
+|   FileOptionsQueryPayload.ts
+|   FilePayload.ts
+|   FileRepPayload.ts
+|   FileUpdateBase64Payload.ts
+|   FileUpdateMultipartPayload.ts
+|   IFileVersionOptimizeDTO.ts
+|   ListObjectsPayload.ts
+|   OptimizePayload.ts
+|   PresignedFileRepPayload.ts
+|   VersionPayload.ts
+File/Domain/Services/
+|   CategoryService.ts
+|   FileService.ts
+File/Domain/UseCases/
+|   CreateBucketUseCase.ts
+|   DownloadUseCase.ts
+|   GetFileMetadataUseCase.ts
+|   GetPresignedGetObjectUseCase.ts
+|   ListFilesUseCase.ts
+|   ListObjectsUseCase.ts
+|   OptimizeUseCase.ts
+|   RemoveFileUseCase.ts
+|   UpdateFileBase64UseCase.ts
+|   UpdateFileMultipartUseCase.ts
+|   UploadBase64UseCase.ts
+|   UploadMultipartUseCase.ts
+File/Domain/
+|---Entities
+|---Models
+|---Payloads
+|---Services
+|---UseCases
+File/Infrastructure/Repositories/
+|   FileMikroORMRepository.ts
+|   FileMongooseRepository.ts
+|   FileTypeORMRepository.ts
+|   FileVersionMikroORMRepository.ts
+|   FileVersionMongooseRepository.ts
+|   FileVersionTypeORMRepository.ts
+|   IFileRepository.ts
+|   IFileVersionRepository.ts
+File/Infrastructure/Schemas/
+|   FileMikroORM.ts
+|   FileMongoose.ts
+|   FileTypeORM.ts
+|   FileVersionMikroORM.ts
+|   FileVersionMongoose.ts
+|   FileVersionTypeORM.ts
+File/Infrastructure/
+|---Repositories
+|---Schemas
+File/Presentation/Commands/
+|   CreateBucketCommand.ts
+|   CreateVapID.ts
+File/Presentation/Controllers/
+|   FileController.ts
+File/Presentation/Criterias/
+|   FileFilter.ts
+|   FileSort.ts
+File/Presentation/DTO/
+|   FileBase64OptimizeDTO.ts
+|   FileMultipartOptimizeDTO.ts
+|   FileUpdateBase64OptimizeDTO.ts
+|   FileUpdateMultipartOptimizeDTO.ts
+|   FileVersionOptimizeDTO.ts
+File/Presentation/Handlers/
+|   FileExpressHandler.ts
+|   FileKoaHandler.ts
+File/Presentation/Middlewares/
+|   FileExpressReqMulterMiddleware.ts
+|   FileKoaReqMulterMiddleware.ts
+File/Presentation/Requests/
+|   CreateBucketCommandRepRequest.ts
+File/Presentation/Transformers/
+|   FileTransformer.ts
+|   FileVersionTransformer.ts
+|   IFileTransformer.ts
+|   IFileVersionTransformer.ts
+|   ObjectTransformer.ts
+File/Presentation/Validations/
+|   DownloadSchemaValidation.ts
+|   FileBase64SchemaValidation.ts
+|   FileBase64UpdateSchemaValidation.ts
+|   FileMultipartSchemaValidation.ts
+|   FileMultipartUpdateSchemaValidation.ts
+|   FileOptionsQuerySchemaValidation.ts
+|   FileRepSchemaValidation.ts
+|   ListObjectsSchemaValidation.ts
+|   OptimizeSchemaValidation.ts
+|   PartialFileSchemaValidation.ts
+|   PresignedFileSchemaValidation.ts
+File/Presentation/
+|---Commands
+|---Controllers
+|---Criterias
+|---DTO
+|---Handlers
+|---Middlewares
+|---Requests
+|---Transformers
+|---Validations
+File/Tests/
+|   file.handler.spec.ts
+|   fixture.ts
+|   MockMinioStrategy.ts
+|   types.ts
+File/
+|---Domain
+|---Infrastructure
+|---Presentation
+|---Tests
+Item/Domain/Entities/
+|   IItemDomain.ts
+|   Item.ts
+Item/Domain/Factories/
+|   ItemBuilder.ts
+Item/Domain/Payloads/
+|   ItemRepPayload.ts
+|   ItemUpdatePayload.ts
+Item/Domain/UseCases/
+|   GetItemUseCase.ts
+|   ListItemsUseCase.ts
+|   RemoveItemUseCase.ts
+|   SaveItemUseCase.ts
+|   UpdateItemUseCase.ts
+Item/Domain/
+|---Entities
+|---Factories
+|---Payloads
+|---UseCases
+Item/Infrastructure/Repositories/
+|   IItemRepository.ts
+|   ItemMikroORMRepository.ts
+|   ItemMongooseRepository.ts
+|   ItemTypeORMRepository.ts
+Item/Infrastructure/Schemas/
+|   ItemMikroORM.ts
+|   ItemMongoose.ts
+|   ItemTypeORM.ts
+Item/Infrastructure/Seeds/
+|   ItemSeed.ts
+Item/Infrastructure/
+|---Repositories
+|---Schemas
+|---Seeds
+Item/Presentation/Controllers/
+|   ItemController.ts
+Item/Presentation/Criterias/
+|   ItemFilter.ts
+|   ItemSort.ts
+Item/Presentation/Handlers/
+|   ItemExpressHandler.ts
+|   ItemKoaHandler.ts
+Item/Presentation/Transformers/
+|   IItemTransformer.ts
+|   ItemTransformer.ts
+Item/Presentation/Validations/
+|   ItemSchemaSaveValidation.ts
+|   ItemSchemaUpdateValidation.ts
+Item/Presentation/
+|---Controllers
+|---Criterias
+|---Handlers
+|---Transformers
+|---Validations
+Item/Tests/
+|   item.handler.spec.ts
+|   types.ts
+Item/
+|---Domain
+|---Infrastructure
+|---Presentation
+|---Tests
+Notification/Domain/Entities/
+|   EmailNotification.ts
+|   IEmailNotificationData.ts
+|   IFilesAttachments.ts
+|   INotificationDomain.ts
+|   INotificationResponse.ts
+|   ISendEmailParams.ts
+|   Notification.ts
+|   PushNotification.ts
+|   TypeNotification.ts
+Notification/Domain/Enum/
+|   StatusNotificationEnum.ts
+|   TypeEnum.ts
+|   TypeNotificationEnum.ts
+Notification/Domain/Payloads/
+|   NotificationRepPayload.ts
+|   NotificationSendMessagePayload.ts
+Notification/Domain/Services/
+|   AttachmentsFilesService.ts
+|   NotificationService.ts
+|   SendEmailService.ts
+Notification/Domain/UseCases/
+|   CreateSubscriptionUseCase.ts
+|   SendPushNotificationUseCase.ts
+Notification/Domain/
+|---Entities
+|---Enum
+|---Payloads
+|---Services
+|---UseCases
+Notification/Infrastructure/Repositories/
+|   INotificationRepository.ts
+|   NotificationMongooseRepository.ts
+Notification/Infrastructure/Schemas/
+|   NotificationMongoose.ts
+|   NotificationTypeORM.ts
+Notification/Infrastructure/
+|---Repositories
+|---Schemas
+Notification/Presentation/Controller/
+|   NotificationController.ts
+Notification/Presentation/Criterias/
+|   NotificationFilter.ts
+|   NotificationSort.ts
+Notification/Presentation/Handlers/
+|   NotificationExpressHandler.ts
+|   NotificationKoaHandler.ts
+Notification/Presentation/Requests/
+|   NotificationCreateSuscriptionRequest.ts
+|   NotificationSendMessageRequest.ts
+Notification/Presentation/
+|---Controller
+|---Criterias
+|---Handlers
+|---Requests
+Notification/Shared/
+|   EmailStrategy.ts
+|   INotifierStrategy.ts
+|   NotifierFactory.ts
+|   WebPushStrategy.ts
+Notification/Tests/
+|   MockStrategy.ts
+Notification/
+|---Domain
+|---Infrastructure
+|---Presentation
+|---Shared
+|---Tests
+Shared/Application/Http/
+|   AppExpress.ts
+|   AppKoa.ts
+|   ErrorExpressHandler.ts
+|   ErrorKoaHandler.ts
+|   ExpressResponder.ts
+|   IApp.ts
+|   IAppConfig.ts
+|   KoaResponder.ts
+Shared/Application/Logger/
+|   Logger.ts
+Shared/Application/
+|---Http
+|---Logger
+Shared/Domain/Entities/
+|   Base.ts
+|   IBaseDomain.ts
+Shared/Domain/Enum/
+|   ResponseMessageEnum.ts
+Shared/Domain/Exceptions/
+|   InvalidPasswordException.ts
+|   UniqueAttributeException.ts
+Shared/Domain/ValueObjects/
+|   Password.ts
+Shared/Domain/
+|---Entities
+|---Enum
+|---Exceptions
+|---ValueObjects
+Shared/Exceptions/
+|   DecryptForbiddenException.ts
+|   ErrorException.ts
+|   NotFoundException.ts
+Shared/Factories/
+|   AppFactory.ts
+|   AxiosFactory.ts
+|   CacheFactory.ts
+|   CronFactory.ts
+|   DatabaseFactory.ts
+|   EntityMikroORMManagerFactory.ts
+|   FilesystemFactory.ts
+|   SeedFactory.ts
+|   TokenFactory.ts
+Shared/Helpers/
+|   AuthHelper.ts
+Shared/Infrastructure/Crons/
+|   Cron.ts
+|   TestCron.ts
+Shared/Infrastructure/Database/
+|   CreateMikroORMConnection.ts
+|   CreateMongooseConnection.ts
+|   CreateTypeORMConnection.ts
+|   ICreateConnection.ts
+Shared/Infrastructure/Encryption/
+|   BcryptEncryptionStrategy.ts
+|   IEncryption.ts
+|   Md5EncryptionStrategy.ts
+Shared/Infrastructure/Events/
+|   EventHandler.ts
+|   ForgotPasswordEvent.ts
+|   IDataEvent.ts
+|   RegisterEvent.ts
+|   SendMessageEvent.ts
+|   UserCreatedEvent.ts
+|   VerifiedAccountEvent.ts
+Shared/Infrastructure/Filesystem/
+|   IFilesystem.ts
+|   MinioStrategy.ts
+Shared/Infrastructure/Orm/
+|   BasePaginator.ts
+|   IPaginator.ts
+|   IPaginatorConfig.ts
+|   MikroORMPaginator.ts
+|   MongoosePaginator.ts
+|   TypeORMPaginator.ts
+Shared/Infrastructure/Repositories/
+|   BaseMikroORMRepository.ts
+|   BaseMongooseRepository.ts
+|   BaseTypeORMRepository.ts
+|   IBaseRepository.ts
+|   IByOptions.ts
+|   ICacheRepository.ts
+|   RedisCacheRepository.ts
+Shared/Infrastructure/Seeds/
+|   BaseSeed.ts
+|   ISeed.ts
+Shared/Infrastructure/templates/emails/auth/
+|   forgotPassword.hbs
+|   register.hbs
+|   verifiedAccount.hbs
+Shared/Infrastructure/templates/emails/
+|---auth
+Shared/Infrastructure/templates/
+|---emails
+Shared/Infrastructure/
+|   AxiosHandler.ts
+|   AxiosSendPayload.ts
+|---Crons
+|---Database
+|---Encryption
+|---Events
+|---Filesystem
+|---Orm
+|---Repositories
+|---Seeds
+|---templates
+Shared/InterfaceAdapters/Tests/
+|   IBodyResponse.ts
+|   IClassValidatorErrorResponse.ts
+|   IFetchResponse.ts
+|   ILogin.ts
+|   IPaginatorTransformer.ts
+Shared/InterfaceAdapters/
+|   ILocaleMessage.ts
+|   ITimestamps.ts
+|   IUniqueConfig.ts
+|---Tests
+Shared/Presentation/Commands/
+|   CreateFolderLogger.ts
+|   SeedCommand.ts
+|   SynchronizeDb.ts
+Shared/Presentation/Exceptions/
+|   DuplicateEntityHttpException.ts
+|   RouteNotFoundHttpException.ts
+Shared/Presentation/Handlers/
+|   IndexExpressHandler.ts
+|   IndexKoaHandler.ts
+Shared/Presentation/Middlewares/
+|   ContainerExpressMiddleware.ts
+|   ContainerKoaMiddleware.ts
+|   ContextMikroORMExpressMiddleware.ts
+|   ContextMikroORMKoaMiddleware.ts
+|   LoggerExpressMiddleware.ts
+|   LoggerKoaMiddleware.ts
+|   RedirectRouteNotFoundExpressMiddleware.ts
+|   RedirectRouteNotFoundKoaMiddleware.ts
+|   ThrottleExpressMiddleware.ts
+|   ThrottleKoaMiddleware.ts
+Shared/Presentation/Requests/
+|   Filter.ts
+|   ICriteria.ts
+|   IdPayload.ts
+|   IFilter.ts
+|   IPagination.ts
+|   IRequestCriteria.ts
+|   ISort.ts
+|   RequestCriteria.ts
+|   Sort.ts
+Shared/Presentation/Shared/
+|   ErrorHttpException.ts
+|   ExceptionFactory.ts
+|   FormatError.ts
+|   FormatResponder.ts
+|   IErrorMessage.ts
+|   IFormatResponder.ts
+|   Locales.ts
+|   Pagination.ts
+|   PaginatorTransformer.ts
+|   RequestContext.ts
+|   Transformer.ts
+|   ValidatorSchema.ts
+Shared/Presentation/Transformers/
+|   BaseTransformer.ts
+|   DefaultMessageTransformer.ts
+|   DefaultTransformer.ts
+|   IDefaultMessageTransformer.ts
+Shared/Presentation/Validations/
+|   CriteriaPayload.ts
+|   CriteriaSchemaValidation.ts
+|   IdSchemaValidation.ts
+Shared/Presentation/
+|---Commands
+|---Exceptions
+|---Handlers
+|---Middlewares
+|---Requests
+|---Shared
+|---Transformers
+|---Validations
+Shared/Tests/
+|   index.handler.spec.ts
+|   whiteList.handler.spec.ts
+|   WhiteListExpressHandler.ts
+|   WhiteListKoaHandler.ts
+Shared/
+|---Application
+|---Domain
+|---Exceptions
+|---Factories
+|---Helpers
+|---Infrastructure
+|---InterfaceAdapters
+|---Presentation
+|---Tests
+
+|   command.ts
+|   crons.ts
+|   exceptions.ts
+|   index.ts
+|   initCommand.ts
+|   initTestServer.ts
+|   inversify.config.ts
+|   obtener_carpetas.py
+|   register.ts
+|   seed.ts
+|---Auth
+|---Config
+|---File
+|---Item
+|---Notification
+|---Shared
